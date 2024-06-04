@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="./css/app2.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#000',
+                        white: '#fff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .btn{
+            @apply font-bold rounded;
+        }
+
+        .btn-black{
+            @apply bg-black text-white;
+            transition: all 0.3s;
+        }
+
+        .btn-black:hover{
+            @apply bg-white text-black;
+        }
+
+        .btn-white{
+            @apply bg-white text-black;
+        }
+
+        .btn-white:hover{
+            @apply bg-black text-white;
+        }
+
+        .btn-big{
+            @apply py-4 px-7;
+        }
+
+        .btn:not(.btn-big){
+            @apply py-2 px-4;
+        }
+
+        .header-content{
+            @apply px-8 py-12 flex flex-row flex-wrap gap-10 items-center justify-center;
+        }
+
+        .citation{
+            @apply border-l-4 pl-2 border-red-500 text-white font-semibold;
+         
+        }
+        .blanco-negritas {
+            color: white;
+            font-weight:lighter;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav class="banner-background">
+            <h3>
+                <span data-text="j"></span>
+                <span>rgb</span>
+            </h3>
+            <label for="burger">
+                <input type="checkbox" id="burger">
+                <span class="btn btn-white">☰</span>
+            </label>
+            <menu>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Discos</a></li>
+                <li><a href="#">Artistas</a></li>
+                <li><a href="#">CD's</a></li>
+            </menu>
+            <button class="btn btn-black">Contáctanos</button>
+        </nav>
+        <div class="header-content">
+            <div>
+                <blockquote class="citation">
+                    <p>
+                        Redescubre la magia de la música con el sonido auténtico de los vinilos.
+                        ¡Haz tuya la experiencia!
+                    </p>
+                </blockquote>
+                <h1 class=" blanco-negritas">
+                    Explora nuestra más nueva<br>
+                    <span class=" blanco-negritas">
+                        <span class="blanco-negritas">mercancía exclusiva</span>
+                    </span>
+                </h1>
+                <button class="btn btn-white btn-big">
+                    Ver más productos <br>
+                </button>
+                <blockquote class="citation">
+                    <p>
+                        Descubre nuetro talento de la semana: Brújula - Siddhartha.<br >
+                    </p>
+                </blockquote>
+                <video width="640" height="360" controls>
+                    <source src="C:/Users/Dell/Documents/Prog Web/CarritoU2/img/Video.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+</header>
+</body>
+</html>
